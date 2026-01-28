@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-normalize-indices/tags). For example,
+
+```javascript
 import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@v0.1.0-esm/index.mjs';
 ```
 
@@ -103,7 +108,7 @@ var idx = normalizeIndices( [ 15, -15 ], 10 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@v0.1.0-esm/index.mjs';
+import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@esm/index.mjs';
 
 // Generate a list of random indices:
 var idx1 = discreteUniform( 100, -20, 20, {
