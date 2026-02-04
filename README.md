@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@esm/index.mjs';
+import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@v0.1.1-esm/index.mjs';
 ```
 
 #### normalizeIndices( indices, max )
@@ -103,7 +103,7 @@ var idx = normalizeIndices( [ 15, -15 ], 10 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@esm/index.mjs';
+import normalizeIndices from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-normalize-indices@v0.1.1-esm/index.mjs';
 
 // Generate a list of random indices:
 var idx1 = discreteUniform( 100, -20, 20, {
