@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,45 +16,34 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var normalizeIndex = require( '@stdlib/ndarray-base-normalize-index' );
-
-
-// MAIN //
+import { Collection } from '@stdlib/types/array';
 
 /**
 * Normalizes a list of indices to the interval `[0,max]`.
 *
-* @param {IntegerArray} indices - indices
-* @param {NonNegativeInteger} max - maximum index
-* @returns {(IntegerArray|null)} normalized indices or null
+* ## Notes
+*
+* -   If provided an out-of-bounds index, the function returns `null`.
+* -   The function mutates the input array, even when provided an out-of-bounds index.
+*
+* @param indices - indices
+* @param max - maximum index
+* @returns normalized indices or null
 *
 * @example
-* var idx = normalizeIndices( [ -2, 5 ], 10 );
+* var indices = normalizeIndices( [ -2, 5 ], 10 );
 * // returns [ 9, 5 ]
 *
-* idx = normalizeIndices( [ 15 ], 10 );
+* indices = normalizeIndices( [ -2, 15 ], 10 );
 * // returns null
 */
-function normalizeIndices( indices, max ) {
-	var idx;
-	var flg;
-	var i;
-
-	for ( i = 0; i < indices.length; i++ ) {
-		idx = normalizeIndex( indices[ i ], max );
-		if ( idx === -1 ) {
-			flg = null;
-		}
-		indices[ i ] = idx;
-	}
-	return ( flg === null ) ? flg : indices;
-}
+declare function normalizeIndices( indices: Collection<number>, max: number ): Collection<number> | null;
 
 
 // EXPORTS //
 
-module.exports = normalizeIndices;
+export = normalizeIndices;
